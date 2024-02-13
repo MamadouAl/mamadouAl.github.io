@@ -24,9 +24,7 @@ class MonPortefolio {
      * @return string
      */
     public static function getFinHTML(): string {
-        return '</div>
-            <div class="column is-2">
-            </div> </div> </body> </html>';
+        return '</div> </body> </html>';
     }
 
     /**
@@ -54,10 +52,8 @@ class MonPortefolio {
             </div>
         </div>
     </section>
-    <div class="columns">
-        <div class="column is-2">
-        </div>
-        <div class="column is-8">';
+    <div class="container">
+       ';
     }
 
 
@@ -124,51 +120,65 @@ class MonPortefolio {
 
     /*Contenu du portfolio*/
 
-    public static function jeSuis() : string{
+    public static function jeSuis() : string {
         return '
-        <div id="presentation">
-            <h2 class="title is-2" id="formations">Présentation</h2>
-            <div class="card">
-            <p>Je m\'appelle Mamadou Aliou Diallo et je suis actuellement étudiant en Licence 3 Informatique à l’Université du Havre,
-             passionné par le développement logiciel, le web et la sécurité informatique.</p>
-             <p>Dans le cadre de ma formation, je suis à la recherche d\'un stage en développement informatique 
-             à partir du 08 avril 2024 pour une durée de 2 mois.
-             Ce stage se l\'occasion pour moi de mettre en pratique mes connaissances et compétences acquises au cours de ma formation. </p>
+    <div class="container mx-3 mb-2">
+    <div id="presentation">
+        <h2 class="title is-2" id="formations">Présentation</h2>
+        <div class="card">
+            <div class="content is-centered">
+                <p>Je m\'appelle Mamadou Aliou Diallo et je suis actuellement étudiant en Licence 3 Informatique à l’Université du Havre,
+                passionné par le développement logiciel, le web et la sécurité informatique.</p>
+                <p>Dans le cadre de ma formation, je suis à la recherche d\'un stage en développement informatique 
+                à partir du 08 avril 2024 pour une durée de 2 mois.
+                Ce stage se l\'occasion pour moi de mettre en pratique mes connaissances et compétences acquises au cours de ma formation. </p>
+            </div>
         </div>
-        </div>';
+    </div>
+    </div>';
     }
+
+
 
     public static function getCompetences() : string {
         return '
-        <h3 class="title is-3" id="competences">Mes Compétences</h3>
-        
-        <div class="columns is-multiline is-centered">
-            '.self::ajouteCard("HTML", "https://www.w3.org/html/logo/downloads/HTML5_Logo_512.png").'
-            '.self::ajouteCard("CSS", "https://img.icons8.com/color/144/000000/css3.png").'
-            '.self::ajouteCard("PHP", "./images/php-logo.png").'           
-            '.self::ajouteCard("SQL", "https://img.icons8.com/color/144/000000/sql.png").'
-            '.self::ajouteCard("PostgreSQL", "https://img.icons8.com/color/144/000000/postgreesql.png").'
-            '.self::ajouteCard("MySQL", "https://img.icons8.com/color/144/000000/mysql.png").'
-            '.self::ajouteCard("Git", "https://img.icons8.com/color/144/000000/git.png").'
-            '.self::ajouteCard("Symfony", "https://img.icons8.com/color/144/000000/symfony.png").'  
-            '.self::ajouteCard("C", "https://img.icons8.com/color/144/000000/c-programming.png").'
-            '.self::ajouteCard("Bulma", "./images/Bulma Logo.png").'
-        </div>';
+    <h3 class="title is-3" id="competences">Mes Compétences</h3>
+    
+    <div class="columns is-multiline is-centered is-mobile">
+        '.self::ajouteCard("HTML", "https://www.w3.org/html/logo/downloads/HTML5_Logo_512.png").'
+        '.self::ajouteCard("CSS", "https://img.icons8.com/color/144/000000/css3.png").'
+        '.self::ajouteCard("PHP", "./images/php-logo.png").'           
+        '.self::ajouteCard("SQL", "https://img.icons8.com/color/144/000000/sql.png").'
+        '.self::ajouteCard("PostgreSQL", "https://img.icons8.com/color/144/000000/postgreesql.png").'
+        '.self::ajouteCard("MySQL", "https://img.icons8.com/color/144/000000/mysql.png").'
+        '.self::ajouteCard("Git", "https://img.icons8.com/color/144/000000/git.png").'
+        '.self::ajouteCard("Symfony", "https://img.icons8.com/color/144/000000/symfony.png").'  
+        '.self::ajouteCard("C", "https://img.icons8.com/color/144/000000/c-programming.png").'
+        '.self::ajouteCard("Bulma", "./images/Bulma Logo.png").'
+    </div>';
     }
+
+
+
 
     private static function ajouteCard(string $title, string $imageSrc) : string {
         return '
-        <div class="column is-one-quarter-desktop is-one-third-mobile">
-            <div class="card">
-                <div class="card-content">
-                    <div class="media">
-                        <figure class="image is-64x64">
-                            <img src="'.$imageSrc.'" alt="'.$title.'" width="100" height="120">
-                        </figure>
+    <div class="column is-3 is-two-fifths">
+        <div class="card">
+            <div class="card-image">
+                <figure class="image is-4by3">
+                    <img src="'.$imageSrc.'" alt="'.$title.'">
+                </figure>
+            </div>
+            <div class="card-content">
+                <div class="media">
+                    <div class="media-content">
+                        <p class="title is-4">'.$title.'</p>
                     </div>
                 </div>
             </div>
-        </div>';
+        </div>
+    </div>';
     }
 
     //Mes formations
