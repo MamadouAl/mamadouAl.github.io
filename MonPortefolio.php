@@ -24,7 +24,9 @@ class MonPortefolio {
      * @return string
      */
     public static function getFinHTML(): string {
-        return '</div> </body> </html>';
+        return '
+        </div> <!-- Fin de la div container -->
+        </div> </body> </html>';
     }
 
     /**
@@ -124,17 +126,17 @@ class MonPortefolio {
         return '
     <div class="container mx-3 mb-2">
     <div id="presentation">
-        <h2 class="title is-2" id="formations">Présentation</h2>
+        <h2 class="title is-2 has-background-dark has-text-white-ter" id="formations">Présentation</h2>
         <div class="card">
             <div class="content is-centered">
-                <p>Je m\'appelle Mamadou Aliou Diallo et je suis actuellement étudiant en Licence 3 Informatique à l’Université du Havre,
-                passionné par le développement logiciel, le web et la sécurité informatique.</p>
-                <p>Dans le cadre de ma formation, je suis à la recherche d\'un stage en développement informatique 
+                <p class="is-size-5 is-size-7-mobile">
+                Je m\'appelle Mamadou Aliou Diallo et je suis actuellement étudiant en Licence 3 Informatique à l’Université du Havre,
+                passionné par le développement logiciel, le web et la sécurité informatique.</br>
+                Dans le cadre de ma formation, je suis à la recherche d\'un stage en développement informatique 
                 à partir du 08 avril 2024 pour une durée de 2 mois.
                 Ce stage se l\'occasion pour moi de mettre en pratique mes connaissances et compétences acquises au cours de ma formation. </p>
             </div>
         </div>
-    </div>
     </div>';
     }
 
@@ -142,9 +144,10 @@ class MonPortefolio {
 
     public static function getCompetences() : string {
         return '
-    <h3 class="title is-3" id="competences">Mes Compétences</h3>
+    <h2 class="title is-2 has-background-dark has-text-white-ter
+    id="competences">Mes Compétences</h2>
     
-    <div class="columns is-multiline is-centered is-mobile">
+    <div class="columns is-multiline ">
         '.self::ajouteCard("HTML", "https://www.w3.org/html/logo/downloads/HTML5_Logo_512.png").'
         '.self::ajouteCard("CSS", "https://img.icons8.com/color/144/000000/css3.png").'
         '.self::ajouteCard("PHP", "./images/php-logo.png").'           
@@ -158,28 +161,124 @@ class MonPortefolio {
     </div>';
     }
 
-
-
-
-    private static function ajouteCard(string $title, string $imageSrc) : string {
+    public static function getRealisations0() : string {
         return '
-    <div class="column is-3 is-two-fifths">
-        <div class="card">
-            <div class="card-image">
-                <figure class="image is-4by3">
-                    <img src="'.$imageSrc.'" alt="'.$title.'">
-                </figure>
+    <h3 class="title is-3" id="realisations">Mes Réalisations</h3>
+    <div class="columns is-multiline">
+        <div class="column is-one-third">
+            <div class="card">
+                <div class="card-image">
+                    <figure class="image is-4by3">
+                        <img src="./images/ecommerce.png" alt="Ecommerce">
+                    </figure>
+                </div>
+                <div class="card-content">
+                    <div class="content">
+                        <h4 class="title is-4">Site eCommerce</h4>
+                        <p>Site web eCommerce réalisé en HTML, CSS et PHP avec une base de données PostgreSQL</p>
+                    </div>
+                </div>
             </div>
-            <div class="card-content">
-                <div class="media">
-                    <div class="media-content">
-                        <p class="title is-4">'.$title.'</p>
+        </div>
+        <div class="column is-one-third">
+            <div class="card">
+                <div class="card-image">
+                    <figure class="image is-4by3">
+                        <img src="./images/entreprise.png" alt="Entreprise">
+                    </figure>
+                </div>
+                <div class="card-content">
+                    <div class="content">
+                        <h4 class="title is-4">Vitrine pour une entreprise</h4>
+                        <p>Site web vitrine pour une entreprise réalisé en HTML, CSS et PHP</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="column is-one-third">
+            <div class="card">
+                <div class="card-image">
+                    <figure class="image is-4by3">
+                        <img src="./images/nfc.png" alt="NFC">
+                    </figure>
+                </div>
+                <div class="card-content">
+                    <div class="content">
+                        <h4 class="title is-4">Application NFCReader</h4>
+                        <p>Application de lecture de carte NFC réalisée en Java avec Android Studio</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>';
     }
+
+    private static function ajouteCard(string $title, string $imageSrc) : string {
+        return '
+    <div class="column is-6 is-one-fifth-desktop">
+        <div class="card">
+            <div class="card-image">
+                <figure class="image is-4by3">
+                    <img src="'.$imageSrc.'" alt="'.$title.'">
+                </figure>
+            </div>
+        </div>
+    </div>
+    ';
+    }
+    public static function getRealisations() : string {
+        return '
+    <h3 class="title is-2 has-background-dark has-text-white-ter" id="realisations">Mes Réalisations</h3>
+    <div class="columns is-multiline">
+        '.self::ajouteRealisationCard("Site eCommerce", ["./images/ecommerce.png", "./images/ecommerce2.png", "./images/ecommerce3.png"], "https://pathetransport.fr/").'
+        '.self::ajouteRealisationCard("Vitrine pour une entreprise", ["./images/pathe1.png", "./images/pathe2.png", "./images/pathe3.png"], "https://pathetransport.fr/").'
+    </div>';
+}
+
+private static function ajouteRealisationCard(string $title, array $images, $lien='#') : string {
+    return '
+    <div class="column is-12 is-one-third-desktop">
+        <div class="card">
+            <header class="card-header">
+                <p class="card-header-title">' . $title . '</p>
+            </header>
+            <div class="card-content">
+                <div class="content">
+                    <div class="carousel">
+                        <div class="carousel-container">
+                            <div class="carousel-item">
+                                <img src="' . $images[0] . '" alt="' . $title . ' Image 1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="' . $images[1] . '" alt="' . $title . ' Image 2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="' . $images[2] . '" alt="' . $title . ' Image 3">
+                            </div>
+                        </div>
+                        <div class="carousel-navigation">
+                            <div class="carousel-nav-left">
+                                <span class="icon">
+                                    <i class="fas fa-chevron-left"></i>
+                                </span>
+                            </div>
+                            <div class="carousel-nav-right">
+                                <span class="icon">
+                                    <i class="fas fa-chevron-right"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="card-footer">
+                <a href="'.$lien.'" class="card-footer-item">Voir le projet</a>
+            </footer>
+        </div>
+    </div>';
+}
+
+
 
     //Mes formations
 

@@ -7,7 +7,7 @@ MonPortefolio::monMenu();
 echo MonPortefolio::getBaniere();
 echo MonPortefolio::jeSuis();
 echo MonPortefolio::getCompetences();
- //MonPortefolio::formations();
+echo MonPortefolio::getRealisations();
  MonPortefolio::renderFooter();
 
 echo MonPortefolio::getFinHTML();
