@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html lang="fr" class="no-js" xmlns:mailto="http://www.w3.org/1999/xhtml">
 <head>
@@ -23,7 +25,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="images/Mad-logo.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/Mad-logo.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/Mad-logo.png">
-    <link rel="manifest" href="monica-1.0.0/site.webmanifest">
+    <link rel="manifest">
 
 </head>
 
@@ -64,11 +66,11 @@
                         <li><a href="index.html#quiSuisJe">Qui suis-je</a></li>
                         <li><a href="index.html#projets">Mes Réalisations</a></li>
                         <li><a href="index.html#formations">Mes Formations</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="contact.php">Contact</a></li>
                     </ul> <!-- s-header__menu-links -->
 
                     <div class="s-header__contact">
-                        <a href="contact.html" class="btn btn--primary s-header__contact-btn">Let's Work Together</a>                        
+                        <a href="contact.php" class="btn btn--primary s-header__contact-btn">Let's Work Together</a>                        
                     </div> <!-- s-header__contact -->
     
                 </nav> <!-- end s-header__nav -->
@@ -111,17 +113,27 @@
                                 <label for="contactSubject">
                                     <span class="contact-label">Sujet</span>
                                 </label><input name="contactSubject" type="text" id="contactSubject" class="full-width" placeholder="Subject" value="">
-                                <label for="contactMessage">
+                                <label id="message" for="contactMessage">
                                     <span class="contact-label">Message</span>
-                                </label><textarea name="contactMessage" id="contactMessage" class="full-width" placeholder="Your Message" required=""></textarea>
+                                </label ><textarea name="contactMessage" id="contactMessage" class="full-width" placeholder="Your Message" required=""></textarea>
                             </div>
                             <button type="submit" class="btn btn--primary u-fullwidth contact-btn">
+
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;">
                                     <path d="M20 4H4c-1.103 0-2 .897-2 2v12c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2zm0 2v.511l-8 6.223-8-6.222V6h16zM4 18V9.044l7.386 5.745a.994.994 0 0 0 1.228 0L20 9.044 20.002 18H4z"></path>
                                 </svg>
                                 Envoyer
                             </button>
                         </form>
+                        <!-- affichage du message de confirmation -->
+                        <?php
+                        if (isset($_SESSION['success_message'])) {
+                            echo '<div id="message" class="success-message">' . $_SESSION['success_message'] . '</div>';
+                            // Supprimer le message de succès de la session après l'avoir affiché une fois
+                            unset($_SESSION['success_message']);
+                        }
+                        ?>
+
                     </div>
                     <div class="column xl-4 md-12 u-flexitem-x-right">
                         <div class="contact-block">
@@ -136,7 +148,7 @@
                                 <li>
                                     <a href="https://github.com/MamadouAl">
                                         <img src="images/GitHub-logo.png" alt="Github" style="width: 35px; height: 35px; background-color: white">
-                                        <span class="u-screen-reader-text">Gitthub</span>
+                                        <span class="u-screen-reader-text">Github</span>
                                     </a>
                                 </li>
                             </ul>
