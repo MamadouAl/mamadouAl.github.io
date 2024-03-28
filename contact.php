@@ -101,7 +101,7 @@
                         <p class="lead">
                             Veillez remplir le formulaire ci-dessous pour me contacter. Je vous répondrai dans les plus brefs délais.
                         </p>
-                        <form method="post" action="traiteForm.php">
+                        <form method="post" action="contact.html">
                             <div class="full-width" style="display: flex; flex-direction: column;">
                                 <label for="contactName">
                                     <span class="contact-label">Nom</span>
