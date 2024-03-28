@@ -66,11 +66,11 @@
                         <li><a href="index.html#quiSuisJe">Qui suis-je</a></li>
                         <li><a href="index.html#projets">Mes Réalisations</a></li>
                         <li><a href="index.html#formations">Mes Formations</a></li>
-                        <li><a href="contact.php">Contact</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                     </ul> <!-- s-header__menu-links -->
 
                     <div class="s-header__contact">
-                        <a href="contact.php" class="btn btn--primary s-header__contact-btn">Let's Work Together</a>                        
+                        <a href="contact.html" class="btn btn--primary s-header__contact-btn">Let's Work Together</a>                        
                     </div> <!-- s-header__contact -->
     
                 </nav> <!-- end s-header__nav -->
@@ -198,7 +198,14 @@
                         <li>
                             <a href="https://github.com/MamadouAl">
                                 <img src="images/GitHub-logo.png" alt="Github" style="width: 35px; height: 35px; background-color: white">
-                                <span class="u-screen-reader-text">Gitthub</span>
+                                <span class="u-screen-reader-text">Github</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://www-apps.univ-lehavre.fr/forge/dm213333/">
+                                <img src="images/gitlab-logo.webp" alt="Gitlab" style="width: 45px; height: 35px;">
+                                <span class="u-screen-reader-text">Gitlab</span>
                             </a>
                         </li>
                     </ul> <!-- end s-footer__social -->
