@@ -4718,3 +4718,81 @@ td:last-child {
 .contact-list li {
 	padding-left: 0;
 }
+
+/* Styles pour la grille des projets */
+.grid-list-items {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr); /* Deux colonnes */
+	gap: var(--vspace-1); /* Espacement entre les éléments */
+	counter-reset: project-counter; /* Compteur pour les numéros */
+}
+
+.grid-list-items__item {
+	counter-increment: project-counter; /* Incrémente le compteur */
+	position: relative;
+	padding-left: 2.5rem; /* Espace pour le numéro */
+}
+
+.grid-list-items__item-title::before {
+	content: counter(project-counter) ". "; /* Affiche le numéro */
+	position: absolute;
+	left: 0;
+	font-weight: bold;
+	color: var(--color-1); /* Couleur du numéro */
+}
+
+/* Styles pour les cartes */
+.card {
+	border: 1px solid var(--color-border);
+	border-radius: var(--border-radius);
+	overflow: hidden;
+	background-color: var(--color-white);
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-content {
+	padding: var(--vspace-0_75);
+}
+
+.card-footer {
+	padding: var(--vspace-0_5);
+	background-color: var(--color-gray-1);
+	text-align: center;
+}
+
+.card-footer-item {
+	color: var(--color-link);
+	font-weight: bold;
+}
+
+/* Styles pour le carrousel */
+.carousel {
+	position: relative;
+}
+
+.carousel-container {
+	display: flex;
+	overflow: hidden;
+}
+
+.carousel-item {
+	flex: 0 0 100%;
+	transition: transform 0.5s ease-in-out;
+}
+
+.carousel-navigation {
+	position: absolute;
+	top: 50%;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	transform: translateY(-50%);
+}
+
+.carousel-nav-left,
+.carousel-nav-right {
+	cursor: pointer;
+	padding: var(--vspace-0_25);
+	background-color: rgba(255, 255, 255, 0.8);
+	border-radius: 50%;
+}
