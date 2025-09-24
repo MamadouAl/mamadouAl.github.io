@@ -370,6 +370,210 @@
     }; // end ssMoveTo
 
 
+   /* Animations au scroll modernes
+    * ------------------------------------------------------ */
+    const ssScrollAnimations = function() {
+        
+        // Observer pour les animations au scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Éléments à animer
+        const elementsToAnimate = document.querySelectorAll('.grid-list-items__item, .s-about, .s-expertise, .s-clients');
+        elementsToAnimate.forEach(el => {
+            el.classList.add('fadeInOnScroll');
+            observer.observe(el);
+        });
+
+        // Effet parallax sur les images de fond
+        const parallaxElements = document.querySelectorAll('.s-about__content-imgbg');
+        
+        const handleScroll = () => {
+            const scrolled = window.pageYOffset;
+            const rate = scrolled * -0.5;
+
+            parallaxElements.forEach(el => {
+                el.style.transform = `translateY(${rate}px)`;
+            });
+        };
+
+        window.addEventListener('scroll', handleScroll);
+    };
+
+    /* Effets de particules cyber
+    * ------------------------------------------------------ */
+    const ssCyberParticles = function() {
+        const hero = document.querySelector('.s-intro');
+        if (!hero) return;
+
+        // Créer des particules flottantes
+        for (let i = 0; i < 20; i++) {
+            const particle = document.createElement('div');
+            particle.classList.add('cyber-particle');
+            particle.style.cssText = `
+                position: absolute;
+                width: ${Math.random() * 4 + 1}px;
+                height: ${Math.random() * 4 + 1}px;
+                background: rgba(234, 144, 16, ${Math.random() * 0.5 + 0.2});
+                border-radius: 50%;
+                left: ${Math.random() * 100}%;
+                top: ${Math.random() * 100}%;
+                animation: floatParticle ${Math.random() * 3 + 2}s ease-in-out infinite;
+                animation-delay: ${Math.random() * 2}s;
+                pointer-events: none;
+                z-index: 1;
+            `;
+            hero.appendChild(particle);
+        }
+
+        // Ajouter les keyframes via une stylesheet
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes floatParticle {
+                0%, 100% {
+                    transform: translateY(0) rotate(0deg);
+                    opacity: 0.3;
+                }
+                25% {
+                    transform: translateY(-20px) rotate(90deg);
+                    opacity: 0.7;
+                }
+                50% {
+                    transform: translateY(-10px) rotate(180deg);
+                    opacity: 1;
+                }
+                75% {
+                    transform: translateY(-30px) rotate(270deg);
+                    opacity: 0.5;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    };
+
+    /* Effets de typing pour le titre
+    * ------------------------------------------------------ */
+    const ssTypingEffect = function() {
+        const titleElement = document.querySelector('.s-intro__content-title');
+        if (!titleElement) return;
+
+        const originalText = titleElement.innerHTML;
+        titleElement.innerHTML = '';
+        titleElement.style.opacity = '1';
+
+        let index = 0;
+        const typeText = () => {
+            if (index < originalText.length) {
+                if (originalText[index] === '<') {
+                    // Gérer les balises HTML
+                    const endTag = originalText.indexOf('>', index);
+                    titleElement.innerHTML += originalText.substring(index, endTag + 1);
+                    index = endTag + 1;
+                } else {
+                    titleElement.innerHTML += originalText[index];
+                    index++;
+                }
+                setTimeout(typeText, 50);
+            }
+        };
+
+        // Démarrer l'effet après un délai
+        setTimeout(typeText, 1000);
+    };
+
+    /* Amélioration des hovers
+    * ------------------------------------------------------ */
+    const ssEnhancedHovers = function() {
+        // Effet de suivi de souris sur les cartes
+        const cards = document.querySelectorAll('.grid-list-items__item');
+        
+        cards.forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                card.style.setProperty('--mouse-x', `${x}px`);
+                card.style.setProperty('--mouse-y', `${y}px`);
+            });
+        });
+
+        // Ajout du CSS pour l'effet de suivi
+        const style = document.createElement('style');
+        style.textContent = `
+            .grid-list-items__item {
+                position: relative;
+            }
+            .grid-list-items__item::after {
+                content: '';
+                position: absolute;
+                top: var(--mouse-y, 50%);
+                left: var(--mouse-x, 50%);
+                width: 100px;
+                height: 100px;
+                background: radial-gradient(circle, rgba(234, 144, 16, 0.1) 0%, transparent 70%);
+                border-radius: 50%;
+                transform: translate(-50%, -50%);
+                opacity: 0;
+                transition: opacity 0.3s ease;
+                pointer-events: none;
+                z-index: 1;
+            }
+            .grid-list-items__item:hover::after {
+                opacity: 1;
+            }
+        `;
+        document.head.appendChild(style);
+    };
+
+   /* Skills Animation
+    * ------------------------------------------------------ */
+    const ssSkillsAnimation = function() {
+        const skillItems = document.querySelectorAll('.skill-item');
+        
+        // Set up Intersection Observer for skills animation
+        const skillObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const skillItem = entry.target;
+                    const skillLevel = skillItem.querySelector('.skill-level');
+                    const level = skillLevel.dataset.level;
+                    
+                    // Add animation class and set CSS variable
+                    skillItem.classList.add('animate-level');
+                    skillItem.style.setProperty('--level-width', level + '%');
+                    
+                    // Unobserve after animation starts
+                    skillObserver.unobserve(skillItem);
+                }
+            });
+        }, {
+            threshold: 0.5,
+            rootMargin: '0px 0px -100px 0px'
+        });
+        
+        // Observe all skill items
+        skillItems.forEach(item => {
+            skillObserver.observe(item);
+        });
+        
+        // Add stagger animation to skills categories
+        const skillsCategories = document.querySelectorAll('.skills-category');
+        skillsCategories.forEach((category, index) => {
+            category.style.animationDelay = `${index * 0.2}s`;
+        });
+    };
+
    /* Initialize
     * ------------------------------------------------------ */
     (function ssInit() {
@@ -380,6 +584,13 @@
         ssMailChimpForm();
         ssAlertBoxes();
         ssMoveTo();
+        
+        // Nouvelles fonctions modernes
+        ssScrollAnimations();
+        ssCyberParticles();
+        ssTypingEffect();
+        ssEnhancedHovers();
+        ssSkillsAnimation();
 
     })();
 

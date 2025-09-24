@@ -4219,6 +4219,240 @@ td:last-child {
 
 
 /* ===================================================================
+ * # SKILLS SECTION
+ *
+ *
+ * ------------------------------------------------------------------- */
+.s-skills {
+    background: var(--color-bg-light);
+    position: relative;
+    overflow: hidden;
+}
+
+.s-skills::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, 
+        rgba(var(--color-primary-rgb), 0.05) 0%,
+        rgba(var(--color-secondary-rgb), 0.03) 50%,
+        rgba(var(--color-accent-rgb), 0.05) 100%);
+    pointer-events: none;
+}
+
+.skills-category {
+    margin-bottom: 4rem;
+    animation: slideInUp 0.8s ease-out;
+}
+
+.skills-category__title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--color-text-dark);
+    margin-bottom: 2rem;
+    text-align: center;
+    position: relative;
+}
+
+.skills-category__title::after {
+    content: '';
+    position: absolute;
+    bottom: -0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: var(--gradient-primary);
+    border-radius: 2px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.skill-item {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+        transparent, 
+        rgba(255, 255, 255, 0.3), 
+        transparent);
+    transition: left 0.5s ease;
+}
+
+.skill-item:hover::before {
+    left: 100%;
+}
+
+.skill-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    border-color: rgba(var(--color-primary-rgb), 0.3);
+}
+
+.skill-icon {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+    filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.1));
+    transition: transform 0.3s ease;
+}
+
+.skill-item:hover .skill-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.skill-name {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-text-dark);
+    margin-bottom: 1rem;
+}
+
+.skill-level {
+    height: 6px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+    overflow: hidden;
+    position: relative;
+}
+
+.skill-level::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: var(--gradient-primary);
+    border-radius: 3px;
+    width: 0;
+    transition: width 1s ease-out 0.5s;
+}
+
+.skill-item.animate-level .skill-level::before {
+    width: var(--level-width);
+}
+
+/* Specializations */
+.specializations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.specialization-item {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.specialization-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--gradient-primary);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.specialization-item:hover::before {
+    transform: scaleX(1);
+}
+
+.specialization-item:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+    border-color: rgba(var(--color-primary-rgb), 0.4);
+}
+
+.spec-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.specialization-item:hover .spec-icon {
+    transform: scale(1.2) rotate(10deg);
+}
+
+.specialization-item h4 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--color-text-dark);
+    margin-bottom: 1rem;
+}
+
+.specialization-item p {
+    color: var(--color-text-light);
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 1.5rem;
+    }
+    
+    .skill-item {
+        padding: 1.5rem 1rem;
+    }
+    
+    .skill-icon {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .specializations-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .specialization-item {
+        padding: 2rem 1.5rem;
+    }
+    
+    .skills-category__title {
+        font-size: 1.5rem;
+    }
+}
+
+/* ===================================================================
  * # FOOTER
  *
  *
@@ -4795,4 +5029,471 @@ td:last-child {
 	padding: var(--vspace-0_25);
 	background-color: rgba(255, 255, 255, 0.8);
 	border-radius: 50%;
+}
+
+/* ===================================================================
+ * # MODERN VISUAL ENHANCEMENTS
+ * Ajouts pour un design top et moderne
+ * ------------------------------------------------------------------- */
+
+/* ------------------------------------------------------------------- 
+ * ## Gradients et Background modernes
+ * ------------------------------------------------------------------- */
+:root {
+    /* Nouveaux gradients cybersécurité */
+    --gradient-primary: linear-gradient(135deg, var(--color-1) 0%, var(--color-1-dark) 100%);
+    --gradient-hero: linear-gradient(135deg, var(--color-2-dark) 0%, var(--color-2) 50%, var(--color-1-dark) 100%);
+    --gradient-card: linear-gradient(145deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+    --gradient-cyber: linear-gradient(45deg, #0a0a0a 0%, #1a1a2e 35%, #16213e 100%);
+    
+    /* Ombres modernes */
+    --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.1);
+    --shadow-medium: 0 8px 30px rgba(0, 0, 0, 0.15);
+    --shadow-strong: 0 15px 50px rgba(0, 0, 0, 0.2);
+    --shadow-cyber: 0 0 20px rgba(234, 144, 16, 0.3);
+    --shadow-glow: 0 0 30px rgba(234, 144, 16, 0.5);
+}
+
+/* ------------------------------------------------------------------- 
+ * ## Animations modernes
+ * ------------------------------------------------------------------- */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes glowPulse {
+    0%, 100% {
+        box-shadow: var(--shadow-cyber);
+    }
+    50% {
+        box-shadow: var(--shadow-glow);
+    }
+}
+
+@keyframes floatAnimation {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ------------------------------------------------------------------- 
+ * ## Section Hero améliorée
+ * ------------------------------------------------------------------- */
+.s-intro {
+    position: relative;
+    background: var(--gradient-cyber);
+    overflow: hidden;
+    min-height: 100vh;
+}
+
+.s-intro::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 30% 40%, rgba(234, 144, 16, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 70% 80%, rgba(52, 61, 53, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.s-intro__content-title {
+    background: linear-gradient(135deg, var(--color-1) 0%, var(--color-white) 50%, var(--color-1-light) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: fadeInUp 1s ease-out 0.3s both;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.s-intro__content-pretitle {
+    animation: fadeInUp 1s ease-out both;
+    color: var(--color-1-lighter);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.s-intro__content-media img {
+    border-radius: 20px;
+    box-shadow: var(--shadow-strong);
+    transition: all 0.3s ease;
+    animation: floatAnimation 3s ease-in-out infinite;
+}
+
+.s-intro__content-media img:hover {
+    transform: scale(1.05);
+    box-shadow: var(--shadow-glow);
+}
+
+/* ------------------------------------------------------------------- 
+ * ## Cartes de projets modernes
+ * ------------------------------------------------------------------- */
+.grid-list-items__item {
+    background: var(--gradient-card);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    transition: all 0.3s ease;
+    animation: fadeInUp 0.6s ease-out both;
+    position: relative;
+    overflow: hidden;
+}
+
+.grid-list-items__item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(234, 144, 16, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.grid-list-items__item:hover::before {
+    left: 100%;
+}
+
+.grid-list-items__item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-medium);
+    border-color: rgba(234, 144, 16, 0.3);
+}
+
+.grid-list-items__item:nth-child(1) { animation-delay: 0.1s; }
+.grid-list-items__item:nth-child(2) { animation-delay: 0.2s; }
+.grid-list-items__item:nth-child(3) { animation-delay: 0.3s; }
+.grid-list-items__item:nth-child(4) { animation-delay: 0.4s; }
+.grid-list-items__item:nth-child(5) { animation-delay: 0.5s; }
+.grid-list-items__item:nth-child(6) { animation-delay: 0.6s; }
+
+.grid-list-items__title {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 1rem;
+}
+
+/* ------------------------------------------------------------------- 
+ * ## Boutons améliorés
+ * ------------------------------------------------------------------- */
+.btn {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-soft);
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.btn:hover::before {
+    left: 100%;
+}
+
+.btn--primary {
+    background: var(--gradient-primary);
+    position: relative;
+    animation: glowPulse 2s ease-in-out infinite;
+}
+
+.btn--primary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-glow);
+}
+
+/* ------------------------------------------------------------------- 
+ * ## Navigation moderne
+ * ------------------------------------------------------------------- */
+.s-header {
+    background: rgba(26, 26, 46, 0.95);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(234, 144, 16, 0.2);
+}
+
+.s-header__menu-links a {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.s-header__menu-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--gradient-primary);
+    transition: width 0.3s ease;
+}
+
+.s-header__menu-links a:hover::after {
+    width: 100%;
+}
+
+/* ------------------------------------------------------------------- 
+ * ## Sections avec parallax
+ * ------------------------------------------------------------------- */
+.s-about,
+.s-expertise,
+.s-clients {
+    position: relative;
+    animation: fadeInUp 0.8s ease-out both;
+}
+
+.s-about__content-imgbg {
+    animation: floatAnimation 4s ease-in-out infinite;
+    opacity: 0.1;
+}
+
+/* ------------------------------------------------------------------- 
+ * ## Compétences avec effet glassmorphism
+ * ------------------------------------------------------------------- */
+.clients-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.clients-list img {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    padding: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-soft);
+}
+
+.clients-list img:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: var(--shadow-medium);
+    border-color: rgba(234, 144, 16, 0.4);
+}
+
+/* ------------------------------------------------------------------- 
+ * ## Footer moderne
+ * ------------------------------------------------------------------- */
+.s-footer {
+    background: var(--gradient-cyber);
+    position: relative;
+}
+
+.s-footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--color-1), transparent);
+}
+
+/* ------------------------------------------------------------------- 
+ * ## Responsive amélioré
+ * ------------------------------------------------------------------- */
+@media screen and (max-width: 768px) {
+    .s-intro__content-title {
+        font-size: 2.5rem;
+        line-height: 1.2;
+    }
+    
+    .grid-list-items__item {
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .clients-list {
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+        gap: 1rem;
+    }
+}
+
+/* ------------------------------------------------------------------- 
+ * ## Effets de scroll
+ * ------------------------------------------------------------------- */
+.fadeInOnScroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+
+.fadeInOnScroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ------------------------------------------------------------------- 
+ * ## Preloader amélioré
+ * ------------------------------------------------------------------- */
+#preloader {
+    background: var(--gradient-cyber);
+}
+
+.dots-fade > div {
+    background: var(--color-1);
+    animation: glowPulse 1.5s ease-in-out infinite;
+}
+
+/* ------------------------------------------------------------------- 
+ * ## Typographie premium
+ * ------------------------------------------------------------------- */
+:root {
+    --font-premium: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-code: 'JetBrains Mono', monospace;
+}
+
+body {
+    font-family: var(--font-premium);
+    font-feature-settings: 'kern' 1, 'liga' 1;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-premium);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+}
+
+.text-display-title {
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+}
+
+code, pre, 
+.grid-list-items__title {
+    font-family: var(--font-code);
+    font-weight: 500;
+}
+
+/* Amélioration des liens sociaux */
+.social-list {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.social-list a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-soft);
+}
+
+.social-list a:hover {
+    background: var(--gradient-primary);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-medium);
+    border-color: var(--color-1);
+}
+
+.social-list svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+}
+
+/* ------------------------------------------------------------------- 
+ * ## Améliorations finales
+ * ------------------------------------------------------------------- */
+.text-pretitle {
+    font-family: var(--font-code);
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-1);
+    position: relative;
+    padding-left: 2rem;
+}
+
+.text-pretitle::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 1.5rem;
+    height: 2px;
+    background: var(--gradient-primary);
+    transform: translateY(-50%);
+}
+
+/* Amélioration du scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-2-dark);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--gradient-primary);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-1-light);
+}
+
+/* Sélection de texte stylée */
+::selection {
+    background: var(--color-1);
+    color: var(--color-2-dark);
+    text-shadow: none;
 }

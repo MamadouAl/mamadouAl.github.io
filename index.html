@@ -4,24 +4,33 @@
 <head>
 
     <!--- basic page needs
-    ================================================== -->
-    <meta charset="utf-8">
+    ================================================== --                        <div class="s-about__                        <div class="s-about__content-main grid-section-split__primary">
+                            <p class="attention-getter">
+                                <blockquote class="blockquote">
+                                    Je suis Mamadou Aliou Diallo, actuellement en <strong>Master 2 Cryptologie et Sécurité Informatique</strong> à l'Université de Bordeaux. 
+                                    <br/><br/>
+                                    Passionné par la <strong>cybersécurité</strong>, la <strong>cryptographie</strong> et le <strong>reverse engineering</strong>, je me spécialise dans l'implémentation de protocoles cryptographiques avancés et l'analyse de sécurité des systèmes informatiques.
+                                    <br/><br/>
+                                    Mon expertise inclut le <strong>chiffrement homomorphe</strong>, les <strong>protocoles PIR</strong>, et la résolution de challenges de sécurité. Je maîtrise également le développement logiciel avec une approche sécurisée.
+                                    <br/><br/>
+                                    Toujours à la recherche de nouveaux défis techniques en <strong>cybersécurité</strong> et <strong>cryptologie</strong> ! 🔐
+                                </blockquote>
+                            </p>
+                        </div> <!-- end s-about__content-main grid-section-split__primary">
+                            <p class="attention-getter">
+                                <blockquote class="blockquote">Je suis Mamadou Aliou Diallo, actuellement en <strong>Master 2 Cryptologie et Sécurité Informatique</strong> à l'Université de Bordeaux. 
+                                <br/><br/>
+                                Passionné par la <strong>cybersécurité</strong>, la <strong>cryptographie</strong> et le <strong>reverse engineering</strong>, je me spécialise dans l'implémentation de protocoles cryptographiques avancés et l'analyse de sécurité des systèmes informatiques.
+                                <br/><br/>
+                                Mon expertise inclut le <strong>chiffrement homomorphe</strong>, les <strong>protocoles PIR</strong>, et la résolution de challenges de sécurité. Je maîtrise également le développement logiciel avec une approche sécurisée.
+                                <br/><br/>
+                                Toujours à la recherche de nouveaux défis techniques en <strong>cybersécurité</strong> et <strong>cryptologie</strong> ! 🔐</blockquote>
+                            </p>
+                        </div> <!-- end s-about__content-main -->  <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Mamadou AL, Etudiant en informatique à l'Université du Havre.">
-    <meta name="author" content="Mamadou AL">
-    <meta name="keywords" content="Mamadou Al Diallo, Mamadou Aliou Diallo, Diallo, Etudiant en informatique, Université du Havre, Developpeur web,
-     Portefolio, Portfolio, mad, 
-    Developpeur informatique, Developpeur logiciel,
-     Developpeur web, Developpeur web junior,
-     Developpeur web fullstack, Developpeur web frontend,
-      Developpeur web backend, Developpeur web freelance,
-      Developpeur web alternance, Developpeur web stage,
-       Developpeur web junior alternance, Developpeur web junior stage,
-       Developpeur web fullstack alternance, Developpeur web fullstack stage,
-       Developpeur web frontend alternance,
-       Developpeur web frontend stage, Developpeur web backend alternance,
-        Developpeur web backend stage, Developpeur web freelance alternance,
-        Developpeur web freelance stage">
+    <meta name="description" content="Mamadou Aliou Diallo - Étudiant en Master 2 Cryptologie et Sécurité Informatique à l'Université de Bordeaux. Spécialisé en cybersécurité, cryptographie et développement logiciel.">
+    <meta name="author" content="Mamadou Aliou Diallo">
+    <meta name="keywords" content="Mamadou Aliou Diallo, Cybersécurité, Cryptologie, Sécurité Informatique, Université de Bordeaux, Cryptographie, Reverse Engineering, PIR, Root-Me, Développeur, Portfolio, Chiffrement Homomorphe, Paillier, Python, C, Java, PHP, Cybersecurity, Information Security, Master CSI">
 
     <title>MamadouAl</title>
 
@@ -34,6 +43,11 @@
     ================================================== -->
     <link rel="stylesheet" href="css/vendor.css">
     <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Polices additionnelles pour un look premium -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
     <!-- favicons
     ================================================== -->
@@ -72,23 +86,39 @@
                 <div class="s-header__block">
                     <div class="s-header__logo">
                         <a class="logo" href="index.html">
-                            <p class="logo__text">MamadouAl</p>
+                            <img src="images/Mad-logo.png" alt="MamadouAl Logo" class="logo__img">
+                            <span class="logo__text">MamadouAl</span>
                         </a>
                     </div>
 
-                    <a class="s-header__menu-toggle" href="#0"><span>Menu</span></a>
+                    <a class="s-header__menu-toggle" href="#0">
+                        <span class="menu-icon">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+                        <span class="menu-text">Menu</span>
+                    </a>
                 </div> <!-- end s-header__block -->
 
                 <nav class="s-header__nav">
                     <ul class="s-header__menu-links">
-                        <li><a href="#quiSuisJe">Qui suis-je</a></li>
-                        <li><a href="#projets">Réalisations</a></li>
-                        <li><a href="#formations">Formations</a></li>
+                        <li><a href="#about" class="smoothscroll">À propos</a></li>
+                        <li><a href="#expertise" class="smoothscroll">Projets</a></li>
+                        <li><a href="#formations" class="smoothscroll">Formation</a></li>
+                        <li><a href="#experiences" class="smoothscroll">Expérience</a></li>
+                        <li><a href="#skills" class="smoothscroll">Compétences</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul> <!-- s-header__menu-links -->
 
                     <div class="s-header__contact">
-                        <a href="contact.php" class="btn btn--primary s-header__contact-btn">Contactez-moi</a>
+                        <a href="contact.html" class="btn btn--primary s-header__contact-btn">
+                            <span>Contactez-moi</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                        </a>
                     </div> <!-- s-header__contact -->
     
                 </nav> <!-- end s-header__nav -->
@@ -111,18 +141,33 @@
                     <div class="column lg-12 s-intro__content-inner grid-block">
                         
                         <div class="s-intro__content-text">
-                            <div class="s-intro__content-pretitle text-pretitle">Salut, Je suis MamadouAl</div>
+                            <div class="s-intro__content-pretitle text-pretitle">
+                                <span class="wave">👋</span> Salut, je suis Mamadou Aliou Diallo
+                            </div>
                             <h1 class="s-intro__content-title">
-                            Developpeur informatique,<br/>
-                            Université du Havre
+                                Expert en <strong>Cybersécurité</strong><br/>
+                                & <strong>Cryptologie</strong>
                             </h1>
+                            <p class="s-intro__content-desc">
+                                Étudiant en Master 2 CSI à l'Université de Bordeaux, passionné par la sécurité informatique,
+                                les protocoles cryptographiques avancés et le reverse engineering.
+                            </p>
+                            <div class="s-intro__content-badges">
+                                <span class="badge">🔐 Cryptographie</span>
+                                <span class="badge">🛡️ Cybersécurité</span>
+                                <span class="badge">🔍 Reverse Engineering</span>
+                            </div>
                         </div> <!-- s-intro__content-text -->
 
                         <div class="s-intro__content-media"> 
                             <div class="s-intro__content-media-inner">                               
-                                <img src="images/Cv-photo.jpg" srcset="images/Cv-photo.jpg 1../imagesges/Cv-photo.jpg 2x" alt="">
-                                <div class="lines">                               
-                                    <span></span>                                  
+                                <img src="images/Cv-photo.jpg" alt="Mamadou Aliou Diallo - Expert Cybersécurité" class="profile-img">
+                                <div class="profile-border"></div>
+                                <div class="floating-elements">
+                                    <div class="float-element" data-delay="0">🔐</div>
+                                    <div class="float-element" data-delay="0.5">🛡️</div>
+                                    <div class="float-element" data-delay="1">💻</div>
+                                    <div class="float-element" data-delay="1.5">🔍</div>
                                 </div>
                             </div>
                         </div> <!-- s-intro__content-media -->                      
@@ -174,24 +219,25 @@
                             </div>
                             <ul class="s-about__social social-list">
 
-                                <!-- Linkedin -->
+                                <!-- LinkedIn -->
                                 <li>
-                                    <a href="https://www.linkedin.com/in/mamadou-aliou-dial/">
-                                        <img src="images/LinkedIn_icon.svg.webp" alt="Linkedin" style="width: 35px; height: 35px;">
-                                        <span class="u-screen-reader-text">Linkedin</span>
+                                    <a href="https://linkedin.com/in/username" target="_blank">
+                                        <img src="images/LinkedIn_icon.svg.webp" alt="LinkedIn" style="width: 35px; height: 35px;">
+                                        <span class="u-screen-reader-text">LinkedIn</span>
                                     </a>
                                 </li>
+                                <!-- GitHub -->
                                 <li>
-                                    <a href="https://github.com/MamadouAl">
-                                        <img src="images/GitHub-logo.png" alt="Github" style="width: 35px; height: 35px; background-color: white">
-                                        <span class="u-screen-reader-text">Github</span>
+                                    <a href="https://github.com/Mamadoual" target="_blank">
+                                        <img src="images/GitHub-logo.png" alt="GitHub" style="width: 35px; height: 35px; background-color: white">
+                                        <span class="u-screen-reader-text">GitHub</span>
                                     </a>
                                 </li>
-                                <!-- Gitlab -->
+                                <!-- Email -->
                                 <li>
-                                    <a href="https://www-apps.univ-lehavre.fr/forge/dm213333/">
-                                        <img src="images/gitlab-logo.webp" alt="Gitlab" style="width: 45px; height: 35px;">
-                                        <span class="u-screen-reader-text">Gitlab</span>
+                                    <a href="mailto:mamadoual.diallo.pro@gmail.com" target="_blank">
+                                        <span style="background: #97b34a; color: white; padding: 8px 12px; border-radius: 50%; font-size: 18px; display: inline-block; width: 35px; height: 35px; text-align: center; line-height: 1;">✉</span>
+                                        <span class="u-screen-reader-text">Email</span>
                                     </a>
                                 </li>
 
@@ -203,245 +249,298 @@
                 
             </section> <!-- end s-about -->
 
-            <!-- expertise
+            <!-- projets
             ----------------------------------------------- -->
             <section id="projets" class="s-expertise">
                 <div class="row s-expertise__content width-sixteen-col">
                     <div class="column xl-12 grid-block grid-section-split">
 
                         <div class="section-header grid-section-split__header">
-                            <div class="text-pretitle">Projets</div>
+                            <div class="text-pretitle">Portfolio</div>
                             <h2 class="text-display-title">
-                                Mes projets académiques et réalisations personnelles.
+                                Mes <strong>Projets</strong> en Cybersécurité
                             </h2>     
                             
                             <p class="lead">
-                                En tant qu'étudiant en informatique, j'ai eu l'occasion de travailler sur plusieurs projets académiques et réalisations personnelles.
-                            </p><hr/>
-
-                            <div class="grid-list-items__item list-items__item">
-                                <div class="grid-list-items__title list-items__item-header">
-                                    <h5 class="list-items__item-title">
-                                        Développement d'un Site web dynamique de bande dessinée - Spirou et Fantasio.
-                                    </h5>
-                                </div>
-                                <div class="grid-list-items__text list-items__item-text">
-                                    <div class="column is-12 is-one-third-desktop">
-                                        <div class="card">
-                                            <div class="card-content">
-                                                <div class="content">
-                                                    <div class="carousel">
-                                                        <div class="carousel-container">
-                                                            <div class="carousel-item">
-                                                                <img src="images/bandedessinee.png" alt="' . $title . ' Image 4">
-                                                            </div>
-                                                        </div>
-                                                        <div class="carousel-navigation">
-                                                            <div class="carousel-nav-left">
-                                                                <span class="icon">
-                                                                    <i class="fas fa-chevron-left"></i>
-                                                                </span>
-                                                            </div>
-                                                            <div class="carousel-nav-right">
-                                                                <span class="icon">
-                                                                    <i class="fas fa-chevron-right"></i>
-                                                                </span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <footer class="card-footer">
-                                                <a href="https://github.com/MamadouAl/bande-dessinee_Spirou_Fantasio" class="card-footer-item">Voir le projet</a>
-                                            </footer>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> <!-- list-item -->
-
-                            <div class="grid-list-items__item list-items__item">
-                                    <h5 class="list-items__item-small-title">
-                                        Modélisation et Implantation d'une base de donnée permettant
-                                        à un collectionneur de gérer sa collection de cartes.
-                                    </h5>
-                                <div class="grid-list-items__text list-items__item-text">
-                                </div>
-                            </div> <!-- list-item -->
-
-                            <div class="grid-list-items__item list-items__item">
-                                <h5 class="list-items__item-small-title">
-                                    Réseaux (Ihm java de traçage de signal électrique, calcul CRC,
-                                    Code de Hamming, Système de Routage de Réseau).
-                                </h5>
-                                <div class="grid-list-items__text list-items__item-text">
-                                    
-                                </div>
-                            </div> <!-- list-item -->
-
-                            <div class="grid-list-items__item list-items__item">
-                                <h5 class="list-items__item-small-title">
-                                    Modélisation, Implantation et Éditions de base de données,
-                                    Requêtes d'interrogation SQL.
-                                </h5>
-                                <div class="grid-list-items__text list-items__item-text">
-                                </div>
-                            </div> <!-- list-item -->
-
-                            <div class="grid-list-items__item list-items__item">
-                                <h5 class="list-items__item-small-title">
-                                    Développement d'une application android permettant de faire
-                                    émarger les étudiants avec leur Léocarte (qui contient un id
-                                    NFC) pendant un examen et générer un fichier pdf
-                                </h5>
-                                <div class="grid-list-items__text list-items__item-text">
-                                </div>
-                            </div> <!-- list-item -->
-
-                            <div class="grid-list-items__item list-items__item">
-                                <h5 class="list-items__item-small-title">
-                                    Résolution parallèle de Labyrinthe avec threads en C.
-                                </h5>
-                                <div class="grid-list-items__text list-items__item-text">
-                                </div>
-                            </div> <!-- list-item -->
+                                Une sélection de mes réalisations en <strong>cryptographie</strong>, <strong>sécurité informatique</strong> et <strong>développement</strong>.
+                            </p>
                         </div> <!-- end section-header -->
 
                         <div class="s-expertise__content-main grid-section-split__primary">
-                            <div class="grid-list-items list-items show-ctr">
+                            <div class="projects-grid">&nbsp;
 
-                                <div class="grid-list-items__item list-items__item">
-                                    <div class="grid-list-items__title list-items__item-header">
-                                        <h3 class="list-items__item-title">
-                                            Développement du jeu Quantik en PHP(avec 2 joueurs)
-                                        </h3>
-                                    </div>
-                                    <div class="grid-list-items__text list-items__item-text">
-                                       
+                            <!-- Projet PIR & Cryptographie -->
+                            <div class="project-card">
+                                <div class="project-icon">🔐</div>
+                                <h3 class="project-title">Protocoles PIR & Chiffrement Homomorphe</h3>
+                                <p class="project-description">
+                                    Étude et implémentation des protocoles PIR (Private Information Retrieval) avec mise en œuvre du chiffrement homomorphe de Paillier pour la récupération privée d'informations.
+                                </p>
+                                <div class="project-tech">
+                                    <span class="tech-tag tech-lang">C</span>
+                                    <span class="tech-tag tech-lang">Python</span>
+                                    <span class="tech-tag tech-crypto">Cryptographie</span>
+                                    <span class="tech-tag tech-crypto">Paillier</span>
+                                </div>
+                                <div class="project-category">Recherche & Cryptographie</div>
+                            </div>
 
-                                        <div class="column is-12 is-one-third-desktop">
-                                            <div class="card">
-                                                <div class="card-content">
-                                                    <div class="content">
-                                                        <div class="carousel">
-                                                            <div class="carousel-container">
-                                                                <div class="carousel-item">
-                                                                    <img src="images/quantik.png" alt="' . $title . ' Image 1">
-                                                                </div>
+                            <!-- Projet Root-Me -->
+                            <div class="project-card">
+                                <div class="project-icon">🚩</div>
+                                <h3 class="project-title">Challenges Root-Me</h3>
+                                <p class="project-description">
+                                    Résolution de challenges de cybersécurité incluant l'exploitation de vulnérabilités, le reverse engineering et le contournement de protections.
+                                </p>
+                                <div class="project-tech">
+                                    <span class="tech-tag tech-security">Reverse Engineering</span>
+                                    <span class="tech-tag tech-security">Exploitation</span>
+                                    <span class="tech-tag tech-lang">ASM</span>
+                                    <span class="tech-tag tech-lang">C</span>
+                                </div>
+                                <div class="project-category">Cybersécurité</div>
+                            </div>
 
-                                                            </div>
-                                                            <div class="carousel-navigation">
-                                                                <div class="carousel-nav-left">
-                                                                    <span class="icon">
-                                                                        <i class="fas fa-chevron-left"></i>
-                                                                    </span>
-                                                                </div>
-                                                                <div class="carousel-nav-right">
-                                                                    <span class="icon">
-                                                                        <i class="fas fa-chevron-right"></i>
-                                                                    </span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <footer class="card-footer">
-                                                    <a href="http://172.16.20.14/~dm213333/quantik/login.php" class="card-footer-item">Voir le projet</a>
-                                                </footer>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> <!-- list-item -->
+                            <!-- Projet Reversi IA -->
+                            <div class="project-card">
+                                <div class="project-icon">🤖</div>
+                                <h3 class="project-title">Jeu Reversi avec IA</h3>
+                                <p class="project-description">
+                                    Développement d'un jeu Reversi optimisé avec Bitboards et IA basée sur l'algorithme Minimax avec élagage alpha-bêta.
+                                </p>
+                                <div class="project-tech">
+                                    <span class="tech-tag tech-lang">C</span>
+                                    <span class="tech-tag tech-ai">IA Minimax</span>
+                                    <span class="tech-tag tech-ai">Bitboards</span>
+                                    <span class="tech-tag tech-ai">Optimisation</span>
+                                </div>
+                                <div class="project-category">Intelligence Artificielle</div>
+                            </div>
 
+                            <!-- Projet Quantik -->
+                            <div class="project-card">
+                                <div class="project-icon">🎯</div>
+                                <h3 class="project-title">Jeu Quantik Multijoueur</h3>
+                                <p class="project-description">
+                                    Jeu de stratégie multijoueur en temps réel avec interface web interactive et gestion des parties simultanées.
+                                </p>
+                                <div class="project-tech">
+                                    <span class="tech-tag tech-web">PHP</span>
+                                    <span class="tech-tag tech-web">HTML/CSS</span>
+                                    <span class="tech-tag tech-db">MySQL</span>
+                                    <span class="tech-tag tech-web">JavaScript</span>
+                                </div>
+                                <div class="project-category">Développement Web</div>
+                                <div class="project-image">
+                                    <img src="images/quantik.png" alt="Jeu Quantik" loading="lazy">
+                                </div>
+                            </div>
 
-                                <div class="grid-list-items__item list-items__item">
-                                    <div class="grid-list-items__title list-items__item-header">
-                                        <h3 class="list-items__item-title">
-                                            Vitrine d'une entreprise d'envoi de colis
-                                        </h3>
-                                    </div>
-                                    <div class="grid-list-items__text list-items__item-text">
-                                       
-                                        <div class="column is-12 is-one-third-desktop">
-                                            <div class="card">
-                                                <div class="card-content">
-                                                    <div class="content">
-                                                        <div class="carousel">
-                                                            <div class="carousel-container">
-                                                                <div class="carousel-item">
-                                                                    <img src="images/pathe1.png" alt="' . $title . ' Image 1">
-                                                                </div>
-                                                            </div>
-                                                            <div class="carousel-navigation">
-                                                                <div class="carousel-nav-left">
-                                                                    <span class="icon">
-                                                                        <i class="fas fa-chevron-left"></i>
-                                                                    </span>
-                                                                </div>
-                                                                <div class="carousel-nav-right">
-                                                                    <span class="icon">
-                                                                        <i class="fas fa-chevron-right"></i>
-                                                                    </span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <footer class="card-footer">
-                                                    <a href="https://pathetransport.fr/" class="card-footer-item">Voir le projet</a>
-                                                </footer>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> <!-- list-item -->
-                                <div class="grid-list-items__item list-items__item">
-                                    <div class="grid-list-items__title list-items__item-header">
-                                        <h3 class="list-items__item-title">Site eCommerce</h3>
-                                    </div>
-                                    <div class="grid-list-items__text list-items__item-text">
-                                
-                                        <div class="column is-12 is-one-third-desktop">
-                                            <div class="card">
-                                                <div class="card-content">
-                                                    <div class="content">
-                                                        <div class="carousel">
-                                                            <div class="carousel-container">
-                                                                <div class="carousel-item">
-                                                                    <img src="images/ecommerce.png" alt="' . $title . ' Image 1">
-                                                                </div>
+                            <!-- Projet Pathe Transport -->
+                            <div class="project-card">
+                                <div class="project-icon">🚛</div>
+                                <h3 class="project-title">Site Pathe Transport</h3>
+                                <p class="project-description">
+                                    Site vitrine professionnel pour entreprise de transport avec design responsive et système de contact.
+                                </p>
+                                <div class="project-tech">
+                                    <span class="tech-tag tech-web">HTML5</span>
+                                    <span class="tech-tag tech-web">CSS3</span>
+                                    <span class="tech-tag tech-web">PHP</span>
+                                    <span class="tech-tag tech-design">Responsive</span>
+                                </div>
+                                <div class="project-category">Site Web</div>
+                                <div class="project-image">
+                                    <img src="images/pathe1.png" alt="Site Pathe Transport" loading="lazy">
+                                </div>
+                                <div class="project-links">
+                                    <a href="https://pathetransport.fr/" target="_blank" class="project-link">
+                                        Voir le site <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                                    </a>
+                                </div>
+                            </div>
 
-                                                            </div>
-                                                            <div class="carousel-navigation">
-                                                                <div class="carousel-nav-left">
-                                                                    <span class="icon">
-                                                                        <i class="fas fa-chevron-left"></i>
-                                                                    </span>
-                                                                </div>
-                                                                <div class="carousel-nav-right">
-                                                                    <span class="icon">
-                                                                        <i class="fas fa-chevron-right"></i>
-                                                                    </span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <footer class="card-footer">
-                                                    <a href="https://github.com/MamadouAl/eCommerce" class="card-footer-item">Voir le projet</a>
-                                                </footer>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> <!-- list-expertise__item -->
-                            </div> <!-- grid-list-items -->
+                            <!-- Projet Site BD -->
+                            <div class="project-card">
+                                <div class="project-icon">📚</div>
+                                <h3 class="project-title">Site Spirou et Fantasio</h3>
+                                <p class="project-description">
+                                    Site web dynamique dédié à la BD avec système de gestion de contenu et interface interactive pour les fans.
+                                </p>
+                                <div class="project-tech">
+                                    <span class="tech-tag tech-web">PHP</span>
+                                    <span class="tech-tag tech-web">HTML/CSS</span>
+                                    <span class="tech-tag tech-db">MySQL</span>
+                                    <span class="tech-tag tech-web">CMS</span>
+                                </div>
+                                <div class="project-category">CMS & Contenu</div>
+                                <div class="project-image">
+                                    <img src="images/bandedessinee.png" alt="Site Spirou et Fantasio" loading="lazy">
+                                </div>
+                            </div>
+
+                            </div> <!-- end projects-grid -->
                         </div> <!-- end s-expertise__content-main -->
-
-
 
                     </div> <!-- end grid-block-->
 
 
                 </div> <!-- end s-expertise__content -->
             </section> <!-- end s-expertise -->
+
+            <!-- ===================================================================
+            - skills section
+            ==================================================================== -->
+            <section id="skills" class="s-skills target-section">
+
+                <div class="s-skills__content">
+
+                    <div class="grid-section-split">
+
+                        <div class="section-header grid-section-split__header">
+                            <div class="text-pretitle">Compétences</div>
+                            <h2 class="text-display-title">
+                                Technologies & Expertises
+                            </h2>
+                            <p class="attention-getter">
+                                Master 2 CSI spécialisé en cybersécurité, cryptographie et développement logiciel.
+                            </p>
+                        </div>
+
+                        <div class="s-skills__content-main grid-section-split__primary">
+                            
+                            <!-- Programming Languages -->
+                            <div class="skills-category">
+                                <h3 class="skills-category__title">💻 Langages de Programmation</h3>
+                                <div class="skills-grid">
+                                    <div class="skill-item">
+                                        <img src="images/competences/C_Programming_Language.svg.png" alt="C" class="skill-icon">
+                                        <span class="skill-name">C</span>
+                                        <div class="skill-level" data-level="90"></div>
+                                    </div>
+                                    <div class="skill-item">
+                                        <img src="images/competences/java.png" alt="Java" class="skill-icon">
+                                        <span class="skill-name">Java</span>
+                                        <div class="skill-level" data-level="85"></div>
+                                    </div>
+                                    <div class="skill-item">
+                                        <img src="images/competences/php-logo.png" alt="PHP" class="skill-icon">
+                                        <span class="skill-name">PHP</span>
+                                        <div class="skill-level" data-level="80"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Web Technologies -->
+                            <div class="skills-category">
+                                <h3 class="skills-category__title">🌐 Technologies Web</h3>
+                                <div class="skills-grid">
+                                    <div class="skill-item">
+                                        <img src="images/competences/html5-logo.png" alt="HTML5" class="skill-icon">
+                                        <span class="skill-name">HTML5</span>
+                                        <div class="skill-level" data-level="95"></div>
+                                    </div>
+                                    <div class="skill-item">
+                                        <img src="images/competences/css3-logo.png" alt="CSS3" class="skill-icon">
+                                        <span class="skill-name">CSS3</span>
+                                        <div class="skill-level" data-level="90"></div>
+                                    </div>
+                                    <div class="skill-item">
+                                        <img src="images/competences/symfony_black_03.png" alt="Symfony" class="skill-icon">
+                                        <span class="skill-name">Symfony</span>
+                                        <div class="skill-level" data-level="75"></div>
+                                    </div>
+                                    <div class="skill-item">
+                                        <img src="images/competences/Bulma Logo.png" alt="Bulma" class="skill-icon">
+                                        <span class="skill-name">Bulma</span>
+                                        <div class="skill-level" data-level="85"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Databases -->
+                            <div class="skills-category">
+                                <h3 class="skills-category__title">🗄️ Bases de Données</h3>
+                                <div class="skills-grid">
+                                    <div class="skill-item">
+                                        <img src="images/competences/mysql-logo.png" alt="MySQL" class="skill-icon">
+                                        <span class="skill-name">MySQL</span>
+                                        <div class="skill-level" data-level="85"></div>
+                                    </div>
+                                    <div class="skill-item">
+                                        <img src="images/competences/Postgresql.svg" alt="PostgreSQL" class="skill-icon">
+                                        <span class="skill-name">PostgreSQL</span>
+                                        <div class="skill-level" data-level="80"></div>
+                                    </div>
+                                    <div class="skill-item">
+                                        <img src="images/competences/SQL-programming-language-2.jpg" alt="SQL" class="skill-icon">
+                                        <span class="skill-name">SQL</span>
+                                        <div class="skill-level" data-level="90"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Tools & Systems -->
+                            <div class="skills-category">
+                                <h3 class="skills-category__title">🛠️ Outils & Systèmes</h3>
+                                <div class="skills-grid">
+                                    <div class="skill-item">
+                                        <img src="images/competences/GitHub-logo.png" alt="Git/GitHub" class="skill-icon">
+                                        <span class="skill-name">Git/GitHub</span>
+                                        <div class="skill-level" data-level="85"></div>
+                                    </div>
+                                    <div class="skill-item">
+                                        <img src="images/competences/Apache_Maven_logo.svg.png" alt="Maven" class="skill-icon">
+                                        <span class="skill-name">Maven</span>
+                                        <div class="skill-level" data-level="75"></div>
+                                    </div>
+                                    <div class="skill-item">
+                                        <img src="images/competences/linux.png" alt="Linux" class="skill-icon">
+                                        <span class="skill-name">Linux</span>
+                                        <div class="skill-level" data-level="80"></div>
+                                    </div>
+                                    <div class="skill-item">
+                                        <img src="images/competences/Windows-New-Logo.png" alt="Windows" class="skill-icon">
+                                        <span class="skill-name">Windows</span>
+                                        <div class="skill-level" data-level="90"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Specializations -->
+                            <div class="skills-category">
+                                <h3 class="skills-category__title">🎯 Spécialisations</h3>
+                                <div class="specializations-grid">
+                                    <div class="specialization-item">
+                                        <div class="spec-icon">🔐</div>
+                                        <h4>Cryptographie</h4>
+                                        <p>Chiffrement homomorphe, protocoles PIR, algorithmes cryptographiques</p>
+                                    </div>
+                                    <div class="specialization-item">
+                                        <div class="spec-icon">🛡️</div>
+                                        <h4>Cybersécurité</h4>
+                                        <p>Exploitation de vulnérabilités, analyse de malwares, pentesting</p>
+                                    </div>
+                                    <div class="specialization-item">
+                                        <div class="spec-icon">🔍</div>
+                                        <h4>Reverse Engineering</h4>
+                                        <p>Désassemblage, analyse binaire, cracking de protections</p>
+                                    </div>
+                                    <div class="specialization-item">
+                                        <div class="spec-icon">🤖</div>
+                                        <h4>Intelligence Artificielle</h4>
+                                        <p>Algorithmes Minimax, optimisation, systèmes experts</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div> <!-- end s-skills__content-main -->
+
+                    </div> <!-- grid-section-split -->
+
+                </div> <!-- end s-skills__content -->
+
+            </section> <!-- end s-skills -->
 
             <!-- clients
             ----------------------------------------------- -->
@@ -452,27 +551,57 @@
 
                         <div class="section-header grid-section-split__header">
                             <div class="text-pretitle">Formations</div>
+                            <h2 class="text-display-title">
+                                Mon Parcours <strong>Académique</strong>
+                            </h2>
 
                             <p class="lead">
-                                En tant qu'étudiant en informatique, j'ai eu l'occasion de suivre plusieurs formations et certifications.
+                                Formation spécialisée en <strong>cybersécurité</strong> et <strong>cryptologie</strong> avec une base solide en informatique.
                             </p>
                         </div>
 
                         <div class="s-expertise__content-main grid-section-split__primary">
                             <div class="grid-list-items list-items show-ctr">
+                                
+                                <!-- Master 2 - Actuel -->
                                 <div class="grid-list-items__item list-items__item">
                                     <div class="grid-list-items__title list-items__item-header">
                                         <h3 class="list-items__item-title">
-                                            2024 - 2025 : Master Crypto et Sécurité Informatique à l'Université de Bordeaux
+                                            🎓 2025 – Présent : Master 2 Cryptologie et Sécurité Informatique (CSI)
                                         </h3>
                                     </div>
-
-                                    <div class="grid-list-items__title list-items__item-header">
-                                        <h3 class="list-items__item-title">
-                                            2021 - 2024 : Licence Informatique à l'Université du Havre
-                                        </h3>
+                                    <div class="grid-list-items__text list-items__item-text">
+                                        <p><strong>Université de Bordeaux</strong></p>
+                                        <p>Spécialisation avancée en cryptographie, sécurité des systèmes, protocoles cryptographiques, et analyse de sécurité.</p>
                                     </div>
                                 </div> <!-- list-item -->
+
+                                <!-- Master 1 -->
+                                <div class="grid-list-items__item list-items__item">
+                                    <div class="grid-list-items__title list-items__item-header">
+                                        <h3 class="list-items__item-title">
+                                            🎓 2024 – 2025 : Master 1 Cryptologie et Sécurité Informatique (CSI)
+                                        </h3>
+                                    </div>
+                                    <div class="grid-list-items__text list-items__item-text">
+                                        <p><strong>Université de Bordeaux</strong></p>
+                                        <p>Fondements de la cryptologie, sécurité informatique, algorithmes cryptographiques, et mathématiques pour la cryptographie.</p>
+                                    </div>
+                                </div> <!-- list-item -->
+
+                                <!-- Licence -->
+                                <div class="grid-list-items__item list-items__item">
+                                    <div class="grid-list-items__title list-items__item-header">
+                                        <h3 class="list-items__item-title">
+                                            🎓 2021 – 2024 : Licence Informatique
+                                        </h3>
+                                    </div>
+                                    <div class="grid-list-items__text list-items__item-text">
+                                        <p><strong>Université de Bordeaux</strong></p>
+                                        <p>Formation complète en informatique : programmation, algorithmique, bases de données, réseaux, et développement logiciel.</p>
+                                    </div>
+                                </div> <!-- list-item -->
+
                             </div>
                         </div> <!-- end s-expertise__content-main -->
 
@@ -480,72 +609,149 @@
                     </div>
                 </div>
 
+            </section> <!-- end formations -->
+
+            <!-- experiences
+            ----------------------------------------------- -->
+            <section id="experiences" class="s-expertise">
+                <div class="row s-expertise__content width-sixteen-col">
+                    <div class="column xl-12 grid-block grid-section-split">
+
+                        <div class="section-header grid-section-split__header">
+                            <div class="text-pretitle">Expériences Professionnelles</div>
+                            <h2 class="text-display-title">
+                                Mon Expérience <strong>Professionnelle</strong>
+                            </h2>
+
+                            <p class="lead">
+                                Expérience pratique en <strong>développement web</strong> et <strong>méthodes agiles</strong>.
+                            </p>
+                        </div>
+
+                        <div class="s-expertise__content-main grid-section-split__primary">
+                            <div class="grid-list-items list-items show-ctr">
+                                
+                                <!-- Expérience Wooster -->
+                                <div class="grid-list-items__item list-items__item">
+                                    <div class="grid-list-items__title list-items__item-header">
+                                        <h3 class="list-items__item-title">
+                                            💼 Développeur Web PHP/WordPress
+                                        </h3>
+                                    </div>
+                                    <div class="grid-list-items__text list-items__item-text">
+                                        <p><strong>Avril 2024 – Juin 2024 | Wooster — Paris, Île-de-France</strong></p>
+                                        <ul style="margin-left: 20px; list-style-type: disc;">
+                                            <li>Développement de solutions internes sur mesure pour optimiser les processus métier</li>
+                                            <li>Rédaction de documentations techniques complètes et maintien de la qualité du code</li>
+                                            <li>Collaboration en équipe avec méthodologie agile (Scrum) pour la gestion de projets</li>
+                                            <li>Maintenance et amélioration de sites WordPress existants</li>
+                                        </ul>
+                                        <p><strong>Compétences :</strong> <span style="background: #f8e8ff; padding: 3px 8px; margin: 2px; border-radius: 15px; font-size: 0.9em;">PHP</span> <span style="background: #e8f0ff; padding: 3px 8px; margin: 2px; border-radius: 15px; font-size: 0.9em;">WordPress</span> <span style="background: #fff0e8; padding: 3px 8px; margin: 2px; border-radius: 15px; font-size: 0.9em;">Scrum</span> <span style="background: #e8f8e8; padding: 3px 8px; margin: 2px; border-radius: 15px; font-size: 0.9em;">Documentation</span></p>
+                                    </div>
+                                </div> <!-- list-item -->
+
+                            </div>
+                        </div> <!-- end s-expertise__content-main -->
+
+                    </div>
+                </div>
+
+                    <!-- Section Compétences Réorganisée -->
                     <div class="row s-clients__content-block width-sixteen-col">
-                    <div class="column xl-12">
-                    
-                        <div class="clients-list">                            
-                            <div class="clients-list__item">
-                                <a href="#0">
-                                    <img src="images/competences/html5-logo.png" height="250" width="200" alt="">
-                                </a>
-                            </div>
-                            <div class="clients-list__item">
-                                <a href="#0">
-                                    <img src="images/competences/css3-logo.png" height="150" width="180" alt="">
-                                </a>
-                            </div>
-                            <div class="clients-list__item">
-                                <a href="#0">
-                                    <img src="images/competences/php-logo.png" alt="">
-                                </a>
+                        <div class="column xl-12">
+                            
+                            <!-- Titre Section Compétences -->
+                            <div style="text-align: center; margin-bottom: 40px;">
+                                <h2 class="text-display-title">Mes <strong>Compétences</strong> Techniques</h2>
+                                <p class="lead">Technologies et domaines d'expertise</p>
                             </div>
 
-                            <div class="clients-list__item">
-                                <a href="#0">
-                                    <img src="images/competences/Bulma%20Logo.png" alt="">
-                                </a>
+                            <!-- Cryptographie & Sécurité -->
+                            <div style="margin-bottom: 50px;">
+                                <h3 style="color: #97b34a; margin-bottom: 20px; font-size: 1.4em;">🔐 Cryptographie & Cybersécurité</h3>
+                                <div style="display: flex; flex-wrap: wrap; gap: 15px; margin-bottom: 20px;">
+                                    <span style="background: #ffe8e8; padding: 8px 16px; border-radius: 20px; font-weight: 500;">Cryptographie</span>
+                                    <span style="background: #ffe8e8; padding: 8px 16px; border-radius: 20px; font-weight: 500;">Chiffrement Homomorphe</span>
+                                    <span style="background: #ffe8e8; padding: 8px 16px; border-radius: 20px; font-weight: 500;">Protocoles PIR</span>
+                                    <span style="background: #ffe8e8; padding: 8px 16px; border-radius: 20px; font-weight: 500;">Reverse Engineering</span>
+                                    <span style="background: #ffe8e8; padding: 8px 16px; border-radius: 20px; font-weight: 500;">Cryptanalyse</span>
+                                    <span style="background: #ffe8e8; padding: 8px 16px; border-radius: 20px; font-weight: 500;">Cybersécurité</span>
+                                </div>
                             </div>
 
-                            <div class="clients-list__item">
-                                <a href="#0">
-                                    <img src="images/competences/mysql-logo.png" alt="">
-                                </a>
-                            </div>
-                            <div class="clients-list__item">
-                                <a href="#0">
-                                    <img src="images/competences/Postgresql.svg" height="200" width="200" alt="">
-                                </a>
-                            </div>
-                            <div class="column clients-list__item">
-                                <a href="#0">
-                                    <img src="images/competences/symfony_black_03.png" height="180" width="180" alt="">
-                                </a>
-                            </div>
-                            <div class="column clients-list__item">
-                                <a href="#0">
-                                    <img src="images/competences/C_Programming_Language.svg.png" height="150" width="150" alt="">
-                                </a>
-                            </div><div class="clients-list__item">
-                                <a href="#0">
-                                    <img src="images/competences/java.png" height="100" width="150" alt="">
-                                </a>
-                            </div>
-                            <div class="clients-list__item">
-                                <a href="#0">
-                                    <img src="images/competences/Apache_Maven_logo.svg.png" alt="">
-                                </a>
+                            <!-- Langages de Programmation -->
+                            <div style="margin-bottom: 50px;">
+                                <h3 style="color: #97b34a; margin-bottom: 20px; font-size: 1.4em;">💻 Langages de Programmation</h3>
+                                <div class="clients-list" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-bottom: 20px;">
+                                    <div class="clients-list__item">
+                                        <img src="images/competences/C_Programming_Language.svg.png" height="80" width="80" alt="C" title="C">
+                                    </div>
+                                    <div class="clients-list__item">
+                                        <img src="images/competences/java.png" height="80" width="80" alt="Java" title="Java">
+                                    </div>
+                                    <div class="clients-list__item">
+                                        <img src="images/competences/php-logo.png" height="80" width="80" alt="PHP" title="PHP">
+                                    </div>
+                                </div>
+                                <div style="display: flex; flex-wrap: wrap; gap: 15px; justify-content: center;">
+                                    <span style="background: #f0f8ff; padding: 8px 16px; border-radius: 20px; font-weight: 500;">Python</span>
+                                    <span style="background: #f0f8ff; padding: 8px 16px; border-radius: 20px; font-weight: 500;">Assembleur</span>
+                                    <span style="background: #f0f8ff; padding: 8px 16px; border-radius: 20px; font-weight: 500;">Sage</span>
+                                </div>
                             </div>
 
-                            <div class="clients-list__item">
-                                <a href="#0">
-                                    <img src="images/competences/Windows-New-Logo.png" alt="">
-                                </a>
+                            <!-- Technologies Web -->
+                            <div style="margin-bottom: 50px;">
+                                <h3 style="color: #97b34a; margin-bottom: 20px; font-size: 1.4em;">🌐 Technologies Web</h3>
+                                <div class="clients-list" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-bottom: 20px;">
+                                    <div class="clients-list__item">
+                                        <img src="images/competences/html5-logo.png" height="80" width="80" alt="HTML5" title="HTML5">
+                                    </div>
+                                    <div class="clients-list__item">
+                                        <img src="images/competences/css3-logo.png" height="80" width="80" alt="CSS3" title="CSS3">
+                                    </div>
+                                    <div class="clients-list__item">
+                                        <img src="images/competences/symfony_black_03.png" height="80" width="80" alt="Symfony" title="Symfony">
+                                    </div>
+                                </div>
+                                <div style="display: flex; flex-wrap: wrap; gap: 15px; justify-content: center;">
+                                    <span style="background: #e8f8ff; padding: 8px 16px; border-radius: 20px; font-weight: 500;">WordPress</span>
+                                </div>
                             </div>
-                            <div class="clients-list__item">
-                                <a href="#0">
-                                    <img src="images/competences/linux.png" height="150" width="150" alt="">
-                                </a>
+
+                            <!-- Bases de Données -->
+                            <div style="margin-bottom: 50px;">
+                                <h3 style="color: #97b34a; margin-bottom: 20px; font-size: 1.4em;">🗄️ Bases de Données</h3>
+                                <div class="clients-list" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+                                    <div class="clients-list__item">
+                                        <img src="images/competences/mysql-logo.png" height="80" width="80" alt="MySQL" title="MySQL">
+                                    </div>
+                                    <div class="clients-list__item">
+                                        <img src="images/competences/Postgresql.svg" height="80" width="80" alt="PostgreSQL" title="PostgreSQL">
+                                    </div>
+                                </div>
                             </div>
+
+                            <!-- Outils & Systèmes -->
+                            <div style="margin-bottom: 30px;">
+                                <h3 style="color: #97b34a; margin-bottom: 20px; font-size: 1.4em;">🛠️ Outils & Systèmes</h3>
+                                <div class="clients-list" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-bottom: 20px;">
+                                    <div class="clients-list__item">
+                                        <img src="images/competences/linux.png" height="80" width="80" alt="Linux" title="Linux">
+                                    </div>
+                                    <div class="clients-list__item">
+                                        <img src="images/competences/Windows-New-Logo.png" height="80" width="80" alt="Windows" title="Windows">
+                                    </div>
+                                    <div class="clients-list__item">
+                                        <img src="images/competences/Apache_Maven_logo.svg.png" height="80" width="80" alt="Maven" title="Maven">
+                                    </div>
+                                </div>
+                                <div style="display: flex; flex-wrap: wrap; gap: 15px; justify-content: center;">
+                                    <span style="background: #e8f5e8; padding: 8px 16px; border-radius: 20px; font-weight: 500;">Git</span>
+                                    <span style="background: #e8f5e8; padding: 8px 16px; border-radius: 20px; font-weight: 500;">Scrum</span>
+                                </div>
+                            </div>
+
                         </div> <!-- end clients-list -->
 
                     </div> <!-- end column -->
@@ -613,8 +819,9 @@
             
             <div class="row s-footer__bottom">
                 <div class="column xl-4 lg-6 md-12 s-footer__block s-footer__about">
-                    <h3>About MamadouAl</h3>
-                    <p> Developpeur web passionné. </p>
+                    <h3>Mamadou Aliou Diallo</h3>
+                    <p>Spécialiste en <strong>Cybersécurité</strong> et <strong>Cryptologie</strong> - Master CSI Bordeaux</p>
+                    <p><a href="mailto:mamadoual.diallo.pro@gmail.com" style="color: #97b34a;">mamadoual.diallo.pro@gmail.com</a></p>
                 </div>
                 <div class="column xl-4 lg-12">
                     <p class="ss-copyright">
@@ -623,25 +830,25 @@
                 </div>
                 <div class="column xl-4 lg-12">
                     <ul class="s-about__social social-list">
-                        <!-- Linkedin -->
+                        <!-- LinkedIn -->
                         <li>
-                            <a href="https://www.linkedin.com/in/mamadou-aliou-dial/">
-                                <img src="images/LinkedIn_icon.svg.webp" alt="Linkedin" style="width: 35px; height: 35px;">
-                                <span class="u-screen-reader-text">Linkedin</span>
+                            <a href="https://linkedin.com/in/username" target="_blank">
+                                <img src="images/LinkedIn_icon.svg.webp" alt="LinkedIn" style="width: 35px; height: 35px;">
+                                <span class="u-screen-reader-text">LinkedIn</span>
                             </a>
                         </li>
-                        <!-- Github -->
+                        <!-- GitHub -->
                         <li>
-                            <a href="https://github.com/MamadouAl">
-                                <img src="images/GitHub-logo.png" alt="Github" style="width: 35px; height: 35px; background-color: white">
-                                <span class="u-screen-reader-text">Github</span>
+                            <a href="https://github.com/Mamadoual" target="_blank">
+                                <img src="images/GitHub-logo.png" alt="GitHub" style="width: 35px; height: 35px; background-color: white">
+                                <span class="u-screen-reader-text">GitHub</span>
                             </a>
                         </li>
-
+                        <!-- Email -->
                         <li>
-                            <a href="https://www-apps.univ-lehavre.fr/forge/dm213333/">
-                                <img src="images/gitlab-logo.webp" alt="Gitlab" style="width: 45px; height: 35px;">
-                                <span class="u-screen-reader-text">Gitlab</span>
+                            <a href="mailto:mamadoual.diallo.pro@gmail.com" target="_blank">
+                                <span style="background: #97b34a; color: white; padding: 8px 12px; border-radius: 50%; font-size: 18px; display: inline-block; width: 35px; height: 35px; text-align: center; line-height: 1;">✉</span>
+                                <span class="u-screen-reader-text">Email</span>
                             </a>
                         </li>
                     </ul> <!-- end s-footer__social -->
