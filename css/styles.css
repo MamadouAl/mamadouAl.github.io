@@ -3198,6 +3198,21 @@ td:last-child {
   vertical-align: bottom;
 }
 
+.s-header__logo a {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: none;
+  gap: 0.5rem;
+}
+
+.logo__text {
+  margin-top: 0 !important;
+  margin: 0;
+}
+
 /* --------------------------------------------------------------------
  * ## main navigation
  * -------------------------------------------------------------------- */
@@ -4509,6 +4524,19 @@ td:last-child {
   box-shadow: 0 4px 15px rgba(234, 144, 16, 0.3);
 }
 
+.education-badge-ended {
+  position: absolute;
+  top: -1px;
+  right: 2rem;
+  background: linear-gradient(135deg, rgba(16, 234, 78, 0.9), rgb(63, 167, 15));
+  color: white;
+  padding: 0.5rem 1.2rem;
+  border-radius: 0 0 15px 15px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(234, 144, 16, 0.3);
+}
+
 .education-icon {
   font-size: 3rem;
   margin-bottom: 1.5rem;
@@ -4912,7 +4940,7 @@ td:last-child {
   }
 
   .project-card {
-    padding: 1.5rem;
+    padding: 1rem;
   }
 
   .project-title {
@@ -5070,16 +5098,53 @@ td:last-child {
 }
 
 .project-title {
-  font-size: 1.5rem;
-  font-weight: 600;
+  /* style: monospace font for project titles */
+  font-family: "JetBrains Mono", monospace;
+
+  font-size: 2.5rem;
+  font-weight: 700;
   color: var(--color-text-dark);
   margin-bottom: 1rem;
+  margin-top: 0;
+}
+
+.project-card:hover .project-title {
+  color: #1a202c;
 }
 
 .project-description {
   color: var(--color-text);
   line-height: 1.6;
   margin-bottom: 1.5rem;
+}
+
+.project-details {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.project-details li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.8rem;
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+.project-details li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--color-accent);
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.project-details li strong {
+  color: var(--color-text-dark);
+  font-weight: 600;
 }
 
 /* Performance Optimizations */
